@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://gagankhokhar.github.io/login-app"
+    "url": "https://gagankhokhar.github.io/login-app/"
   },
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "history": "^4.6.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -29,5 +30,13 @@
     "path": "^0.12.7",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
